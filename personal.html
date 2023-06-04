@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal page</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1">
+    <link rel="stylesheet" href="personal.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="heading">About Me</div>
+        <p>
+            I'm<span> Ubald Jones L. Tuquib,</span> from Kisolon, Sumilao, Bukidnon. I'm 18 years old.<br>
+            I'm currently studying in Bukidnon State University, Bachelor of Science in Information Technology.<br>
+            As an IT student i want to learn about more on Programming and UI Designing.<br>
+            By the support of my Family, Friends, and specially the Almighty Father,<br>
+            I will be a Software Engineer in the future.       
+        </p>
+        <div class="images">
+            <div class="image"><img src="image3.jpeg" alt="Me"></div>
+            <div class="image"><img src="image5.jpg" alt="Family"></div>
+            <div class="image"><img src="1670466713533.jpeg" alt="Coding"></div>
+        </div>
+            <div class="modalContent">
+                <span>&times;</span>
+                <img src="" alt=""/>
+            </div>
+    </div>
+        
+        <script>
+
+            document.querySelectorAll('.images img').forEach(image => {
+                image.onclick = () => {
+                    document.querySelector('.modalContent').style.display ='block';
+                    document.querySelector('.modalContent img').src=image.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.modalContent span').onclick = () =>{
+                document.querySelector('.modalContent').style.display ='none';
+            }
+
+        </script>
+</body>
+</html>
